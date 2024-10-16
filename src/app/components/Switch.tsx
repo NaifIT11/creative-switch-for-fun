@@ -7,7 +7,10 @@ type SwitchProps = {
 
 
 export default function Switch({checked , onCheckedChange}: SwitchProps){
-    return <button className="w-20 h-5 rounded-full border rounded" role="switch" aria-checked={checked} aria-label="Switch Control">
-        <div data-checked={checked} className="w-5 h-4"></div>
+    const handleClick = (e: React.FormEvent<HTMLButtonElement>) => {
+        onCheckedChange(!checked);
+    }
+    return <button onClick={handleClick} data-checked={checked} className="data-[checked=true]:bg-green-300 w-[300px] h-[100px] rounded border rounded bg-gray-100" role="switch" aria-checked={checked} aria-label="Switch Control">
+        <div data-checked={checked} className="data-[checked=true]:translate-x-[198px] transition w-[100px] h-[100px] bg-white"></div>
     </button>
 }
