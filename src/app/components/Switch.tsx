@@ -20,7 +20,7 @@ export default function Switch({ checked, onCheckedChange }: SwitchProps) {
     >
       <div
         data-checked={checked}
-        className="data-[checked=true]:translate-x-[198px] transition w-[100px] h-[100px] bg-white"
+        className="data-[checked=true]:translate-x-[199px] transition w-[100px] h-[100px] bg-white"
       >
         {checked ?   <Smile className="w-full h-full text-black" /> : <Angry className="w-full h-full text-gray-200" />}
       </div>
